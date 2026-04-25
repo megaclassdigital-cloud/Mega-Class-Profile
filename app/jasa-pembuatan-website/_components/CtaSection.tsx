@@ -1,0 +1,29 @@
+"use client";
+import { motion } from "framer-motion";
+
+const CtaSection = () => {
+  return (
+    <section className="py-24 bg-gray-50">
+      <div className="max-w-4xl mx-auto px-4">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="bg-gradient-to-r from-blue-600 to-cyan-400 rounded-2xl shadow-xl p-10 md:p-12 text-white text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Siap Memiliki Website Profesional?</h2>
+          <p className="text-lg md:text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Diskusikan kebutuhan Anda bersama kami. Kami akan membantu Anda menentukan solusi website yang tepat untuk bisnis Anda.
+          </p>
+          <a
+            href="https://wa.me/6281234567890"
+            className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-colors shadow-lg"
+          >
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.175.598 4.22 1.638 5.977L0 24l6.273-1.638A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.6c-1.94 0-3.77-.57-5.32-1.56l-.38-.23-3.75.98 1-3.65-.25-.4A9.56 9.56 0 012.4 12c0-5.3 4.3-9.6 9.6-9.6s9.6 4.3 9.6 9.6-4.3 9.6-9.6 9.6zm5.22-7.2c-.28-.14-1.68-.83-1.94-.92-.26-.1-.45-.14-.64.14-.19.28-.74.92-.9 1.11-.17.19-.34.22-.63.08-.28-.14-1.2-.44-2.28-1.4-.84-.75-1.4-1.68-1.57-1.96-.16-.28-.02-.43.13-.57.13-.13.28-.34.42-.5.14-.17.19-.28.28-.47.09-.19.05-.35-.02-.5-.07-.14-.64-1.53-.88-2.1-.23-.54-.47-.47-.64-.47-.17 0-.36-.02-.55-.02s-.5.07-.77.35c-.26.28-1 1-1 2.45s1.03 2.84 1.18 3.03c.14.19 2.02 3.09 4.89 4.33.68.29 1.21.47 1.62.6.68.22 1.3.19 1.79.11.55-.08 1.68-.69 1.92-1.35.23-.66.23-1.23.16-1.35-.07-.11-.26-.18-.54-.32z"/>
+            </svg>
+            Konsultasi Gratis via WhatsApp
+          </a>
+          <p className="text-sm opacity-80 mt-4">Respon cepat dan tanpa biaya konsultasi.</p>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default CtaSection;
