@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 
 const solutions = [
-  "Dirancang untuk meningkatkan kepercayaan",
+  "Struktur website dirancang untuk meningkatkan kepercayaan sejak pertama kali dilihat",
   "Siap digunakan untuk promosi dan iklan",
-  "Mudah diakses di semua perangkat",
-  "Memiliki struktur yang jelas untuk mengarahkan pengunjung menjadi calon pelanggan",
+  "Tampilan optimal dan mudah diakses untuk semua perangkat (mobile, tablet, desktop)",
+  "Alur website dibuat untuk mengarahkan pengunjung menjadi calon pelanggan",
 ];
 
 const SolutionSection = () => {
@@ -15,8 +15,8 @@ const SolutionSection = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Website yang Tidak Hanya Tampilan, Tapi Juga Hasil</h2>
-            <p className="text-lg text-gray-600 mb-8">Di Mega Class Digital, kami membangun website dengan tujuan yang jelas: membantu bisnis Anda terlihat profesional dan menghasilkan.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Website yang Tidak Hanya Terlihat Bagus, Tapi Juga Bekerja untuk Bisnis Anda</h2>
+            <p className="text-lg text-gray-600 mb-8">Di Mega Class Digital, kami tidak hanya membuat website. Kami merancang website dengan tujuan yang jelas: meningkatkan kepercayaan dan membantu bisnis Anda mendapatkan pelanggan.</p>
             <ul className="space-y-4">
               {solutions.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">

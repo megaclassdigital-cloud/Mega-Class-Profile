@@ -11,20 +11,20 @@
             <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Jasa Pembuatan Website Profesional untuk Bisnis Anda
+                Developement Profesional Website yang Dirancang untuk Mendatangkan Pelanggan
                 </motion.h1>
                 <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }} className="text-lg md:text-xl text-white/90 mb-4 max-w-lg">
-                Bangun kepercayaan, tampil lebih profesional, dan dapatkan pelanggan melalui website yang dirancang untuk kebutuhan bisnis Anda.
+                Bukan sekadar tampilan. Kami membantu bisnis Anda tampil lebih dipercaya dan siap mendapatkan customer melalui website yang dibangun dengan strategi yang jelas.
                 </motion.p>
                 <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="text-sm text-white/60 mb-8">
-                Mulai dari nol hingga siap digunakan, tanpa ribet.
+                Mulai dari nol hingga siap digunakan, tanpa ribet dan tanpa bingung.
                 </motion.p>
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.45 }} className="flex flex-wrap gap-4">
                 <a href="https://wa.me/6281234567890" className="bg-gradient-to-r from-blue-600 to-cyan-400 text-white px-8 py-3.5 rounded-full font-semibold hover:brightness-110 hover:scale-105 transition-all">
-                    Konsultasi Gratis
+                    Konsultasi Gratis via WhatsApp
                 </a>
                 <Link href="/portfolio" className="border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-3.5 rounded-full font-semibold hover:bg-white/20 transition-all">
-                    Lihat Portfolio
+                    Lihat Portfolio Kami
                 </Link>
                 </motion.div>
             </div>
