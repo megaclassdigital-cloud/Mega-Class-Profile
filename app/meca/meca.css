@@ -1,0 +1,781 @@
+.meca-site {
+  --meca-ink: #101828;
+  --meca-night: #061a35;
+  --meca-blue: #0d3b73;
+  --meca-blue-strong: #08244b;
+  --meca-blue-soft: #eef3fa;
+  --meca-cyan: #2d85c4;
+  --meca-yellow: #d8a62a;
+  --meca-coral: #c9893f;
+  --meca-surface: #f6f4ef;
+  --meca-line: #dbe2ea;
+  --meca-muted: #667085;
+  background: var(--meca-surface);
+  color: var(--meca-ink);
+  font-family: var(--font-meca-body), sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+.meca-site h1,
+.meca-site h2,
+.meca-site h3,
+.meca-display {
+  font-family: var(--font-meca-body), sans-serif;
+  text-wrap: balance;
+}
+
+.meca-site h1 {
+  font-size: clamp(2.55rem, 4.6vw, 3.75rem);
+  font-weight: 750;
+  letter-spacing: -0.047em;
+  line-height: 1.07;
+}
+
+.meca-site h2 {
+  font-weight: 720;
+  letter-spacing: -0.036em;
+  line-height: 1.12;
+}
+
+.meca-site h3 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.meca-container {
+  margin-inline: auto;
+  max-width: 1240px;
+  padding-inline: 1rem;
+}
+
+.meca-page-hero {
+  padding-block: clamp(4.75rem, 9vw, 7.5rem);
+}
+
+.meca-hero-copy {
+  max-width: 680px;
+}
+
+.meca-hero-copy h1 {
+  margin-top: 1.25rem;
+  max-width: 18ch;
+}
+
+.meca-hero-copy > p:last-of-type {
+  margin-top: 1.5rem;
+}
+
+.meca-eyebrow {
+  color: var(--meca-blue);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+.meca-section-title {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  max-width: 18ch;
+}
+
+.meca-card {
+  border: 1px solid var(--meca-line);
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 14px 40px rgba(16, 24, 40, 0.06);
+}
+
+.meca-dark {
+  background:
+    radial-gradient(circle at 82% 8%, rgba(216, 166, 42, 0.16), transparent 34%),
+    var(--meca-night);
+  color: #f8fafc;
+}
+
+.meca-feature-showcase {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 108%, rgba(255, 103, 202, 0.2), transparent 36%),
+    radial-gradient(circle at 15% 20%, rgba(70, 214, 255, 0.18), transparent 30%),
+    radial-gradient(circle at 86% 16%, rgba(255, 212, 90, 0.14), transparent 24%),
+    #07152f;
+}
+
+.meca-card-deck {
+  position: relative;
+  margin-inline: auto;
+  max-width: 1040px;
+  min-height: 520px;
+  padding: 42px 30px 58px;
+  perspective: 1200px;
+}
+
+.meca-card-deck__aurora {
+  position: absolute;
+  inset: 6% 0 0;
+  border-radius: 48%;
+  background:
+    radial-gradient(ellipse at 50% 55%, rgba(69, 203, 255, 0.19), transparent 56%),
+    conic-gradient(from 210deg at 50% 54%, rgba(255, 103, 202, 0.14), rgba(70, 214, 255, 0.19), rgba(255, 212, 90, 0.12), rgba(255, 103, 202, 0.14));
+  filter: blur(34px);
+  opacity: 0.88;
+  pointer-events: none;
+}
+
+.meca-card-deck__track {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 430px;
+  align-items: center;
+  justify-content: center;
+}
+
+.meca-feature-card-shell {
+  position: relative;
+  width: min(31vw, 286px);
+  height: 404px;
+  flex: 0 0 auto;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.meca-feature-card--left {
+  z-index: 1;
+  margin-right: 18px;
+  transform: translateY(22px) rotate(-8deg);
+}
+
+.meca-feature-card--center {
+  z-index: 3;
+  width: min(33vw, 316px);
+  height: 444px;
+}
+
+.meca-feature-card--right {
+  z-index: 2;
+  margin-left: 18px;
+  transform: translateY(22px) rotate(8deg);
+}
+
+.meca-feature-card-shell:hover,
+.meca-feature-card-shell:focus-within {
+  z-index: 5;
+  transform: translateY(-10px) rotate(0deg);
+}
+
+.meca-feature-card {
+  --card-accent: #46d6ff;
+  position: relative;
+  display: flex;
+  height: 100%;
+  isolation: isolate;
+  overflow: hidden;
+  flex-direction: column;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 62%, white 18%);
+  border-radius: 26px;
+  padding: 18px;
+  color: #f8fbff;
+  background:
+    radial-gradient(circle at 22% 18%, color-mix(in srgb, var(--card-accent) 28%, transparent), transparent 38%),
+    linear-gradient(145deg, rgba(18, 42, 83, 0.98), rgba(8, 19, 48, 0.99));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    inset 0 0 0 5px rgba(255, 255, 255, 0.035),
+    0 28px 80px rgba(0, 4, 18, 0.5),
+    0 0 32px color-mix(in srgb, var(--card-accent) 22%, transparent);
+  transform-style: preserve-3d;
+}
+
+.meca-feature-card::before {
+  position: absolute;
+  inset: 6px;
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 21px;
+  content: "";
+  pointer-events: none;
+}
+
+.meca-feature-card__foil,
+.meca-feature-card__shine {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.meca-feature-card__foil {
+  mix-blend-mode: screen;
+}
+
+.meca-feature-card__shine {
+  background: linear-gradient(115deg, transparent 16%, rgba(255, 255, 255, 0.06) 36%, rgba(255, 255, 255, 0.42) 49%, rgba(127, 228, 255, 0.12) 60%, transparent 82%);
+  transform: translateX(-115%);
+}
+
+.meca-feature-card:hover .meca-feature-card__foil,
+.meca-feature-card:focus-visible .meca-feature-card__foil {
+  opacity: 0.82;
+}
+
+.meca-feature-card:hover .meca-feature-card__shine,
+.meca-feature-card:focus-visible .meca-feature-card__shine {
+  opacity: 0.8;
+}
+
+.meca-feature-card__topline {
+  position: relative;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f8fbff;
+}
+
+.meca-feature-card__icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 65%, white 18%);
+  border-radius: 14px;
+  color: var(--card-accent);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.meca-feature-card__art {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-height: 150px;
+  place-items: center;
+  color: var(--card-accent);
+}
+
+.meca-feature-card__art > svg {
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 14px 24px color-mix(in srgb, var(--card-accent) 40%, transparent));
+}
+
+.meca-feature-card__orbit {
+  position: absolute;
+  width: 136px;
+  height: 136px;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 42%, transparent);
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--card-accent) 20%, transparent), transparent 64%);
+  box-shadow:
+    inset 0 0 28px color-mix(in srgb, var(--card-accent) 12%, transparent),
+    0 0 32px color-mix(in srgb, var(--card-accent) 20%, transparent);
+}
+
+.meca-card-deck__sparkles {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.meca-card-deck__sparkles span {
+  position: absolute;
+  top: calc(var(--spark-y) * 1%);
+  left: calc(var(--spark-x) * 1%);
+  width: calc(var(--spark-size) * 1px);
+  height: calc(var(--spark-size) * 1px);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 0 12px 3px rgba(98, 218, 255, 0.58);
+  opacity: 0.32;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .meca-feature-card:hover .meca-feature-card__shine,
+  .meca-feature-card:focus-visible .meca-feature-card__shine {
+    animation: meca-card-shine 1.15s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .meca-card-deck__sparkles span {
+    animation: meca-sparkle 3.8s ease-in-out infinite;
+    animation-delay: var(--spark-delay);
+  }
+
+  .meca-feature-card__orbit {
+    animation: meca-card-orbit 6s ease-in-out infinite;
+  }
+}
+
+@keyframes meca-card-shine {
+  from { transform: translateX(-115%); }
+  to { transform: translateX(115%); }
+}
+
+@keyframes meca-sparkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.7); }
+  45% { opacity: 0.95; transform: scale(1.5); }
+}
+
+@keyframes meca-card-orbit {
+  0%, 100% { transform: scale(0.96); opacity: 0.68; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+.meca-academy-band {
+  background:
+    linear-gradient(112deg, rgba(8, 36, 75, 0.08), rgba(45, 133, 196, 0.09) 58%, rgba(216, 166, 42, 0.16)),
+    #faf9f5;
+}
+
+.meca-neon-card {
+  border: 1px solid rgba(51, 231, 255, 0.42);
+  background:
+    radial-gradient(circle at 85% 10%, rgba(255, 79, 216, 0.2), transparent 34%),
+    radial-gradient(circle at 10% 100%, rgba(184, 255, 91, 0.12), transparent 36%),
+    linear-gradient(135deg, #0b1230, #101547 54%, #091424);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 0 0 1px rgba(139, 92, 246, 0.1),
+    0 22px 70px rgba(24, 213, 255, 0.16);
+}
+
+.meca-neon-grid {
+  background-image:
+    linear-gradient(rgba(24, 213, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 213, 255, 0.09) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+
+.mecademy-page {
+  --neon-cyan: #18d5ff;
+  --neon-violet: #8b5cf6;
+  --neon-pink: #ff4fd8;
+  --neon-lime: #b8ff5b;
+  --neon-yellow: #ffd84d;
+  background: #070b1d;
+  color: #f8fbff;
+}
+
+.mecademy-page .meca-eyebrow {
+  color: var(--neon-cyan);
+}
+
+.mecademy-panel {
+  border: 1px solid rgba(24, 213, 255, 0.24);
+  background: rgba(13, 18, 48, 0.78);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 24px 80px rgba(3, 7, 25, 0.48);
+  backdrop-filter: blur(18px);
+}
+
+.mecademy-text-glow {
+  color: #effcff;
+  text-shadow: 0 0 28px rgba(24, 213, 255, 0.38);
+}
+
+.mecademy-neon-line {
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-violet), var(--neon-pink));
+  box-shadow: 0 0 18px rgba(24, 213, 255, 0.52);
+}
+
+.mecademy-card-gallery {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
+  perspective: 1400px;
+}
+
+.mecademy-collectible-card {
+  --collectible-accent: #18d5ff;
+  --collectible-tilt: 0deg;
+  position: relative;
+  display: flex;
+  min-height: 360px;
+  isolation: isolate;
+  overflow: hidden;
+  flex-direction: column;
+  border: 1px solid color-mix(in srgb, var(--collectible-accent) 58%, white 16%);
+  border-radius: 24px;
+  padding: 20px;
+  background:
+    radial-gradient(circle at 18% 14%, color-mix(in srgb, var(--collectible-accent) 24%, transparent), transparent 34%),
+    linear-gradient(145deg, rgba(20, 28, 72, 0.98), rgba(7, 13, 38, 0.99));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    inset 0 0 0 6px rgba(255, 255, 255, 0.025),
+    0 30px 70px rgba(2, 5, 22, 0.46),
+    0 0 32px color-mix(in srgb, var(--collectible-accent) 16%, transparent);
+  transform: rotate(var(--collectible-tilt));
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.mecademy-card-gallery--titles .mecademy-collectible-card {
+  min-height: 520px;
+}
+
+.mecademy-collectible-card::before {
+  position: absolute;
+  inset: 7px;
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 18px;
+  background-image:
+    radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.55) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 76% 32%, rgba(255, 255, 255, 0.38) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 58% 78%, rgba(255, 255, 255, 0.42) 0 1px, transparent 1.8px);
+  background-size: 74px 82px, 91px 103px, 113px 94px;
+  content: "";
+  opacity: 0.32;
+  pointer-events: none;
+}
+
+.mecademy-collectible-card:hover {
+  z-index: 5;
+  border-color: color-mix(in srgb, var(--collectible-accent) 82%, white 12%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 0 0 6px rgba(255, 255, 255, 0.035),
+    0 38px 90px rgba(2, 5, 22, 0.56),
+    0 0 46px color-mix(in srgb, var(--collectible-accent) 25%, transparent);
+  transform: translateY(-10px) rotate(0deg);
+}
+
+.mecademy-collectible-card__foil,
+.mecademy-collectible-card__shine {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.mecademy-collectible-card__foil {
+  mix-blend-mode: screen;
+}
+
+.mecademy-collectible-card__shine {
+  background: linear-gradient(112deg, transparent 18%, rgba(255, 255, 255, 0.04) 37%, rgba(255, 255, 255, 0.42) 50%, rgba(138, 235, 255, 0.12) 61%, transparent 82%);
+  transform: translateX(-118%);
+}
+
+.mecademy-collectible-card:hover .mecademy-collectible-card__foil,
+.mecademy-collectible-card:hover .mecademy-collectible-card__shine {
+  opacity: 0.82;
+}
+
+.mecademy-collectible-card__topline {
+  position: relative;
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(248, 251, 255, 0.84);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.mecademy-collectible-card__icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--collectible-accent) 68%, white 14%);
+  border-radius: 14px;
+  color: var(--collectible-accent);
+  background: rgba(255, 255, 255, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.mecademy-collectible-card__art {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-height: 170px;
+  place-items: center;
+  color: var(--collectible-accent);
+}
+
+.mecademy-collectible-card__art > svg {
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 15px 24px color-mix(in srgb, var(--collectible-accent) 42%, transparent));
+}
+
+.mecademy-collectible-card__art--character {
+  min-height: 280px;
+  margin: 16px -4px 18px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--collectible-accent) 45%, rgba(255, 255, 255, 0.18));
+  border-radius: 18px;
+  background: #070d24;
+  box-shadow:
+    inset 0 0 34px rgba(2, 5, 22, 0.48),
+    0 18px 38px rgba(2, 5, 22, 0.36);
+}
+
+.mecademy-collectible-card__art--character::after {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: linear-gradient(180deg, transparent 58%, rgba(4, 8, 27, 0.48));
+  content: "";
+  pointer-events: none;
+}
+
+.mecademy-collectible-card__character {
+  z-index: 2;
+  object-fit: cover;
+  object-position: center 22%;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s ease;
+}
+
+.mecademy-collectible-card:hover .mecademy-collectible-card__character {
+  filter: saturate(1.08) contrast(1.03);
+  transform: scale(1.035);
+}
+
+.mecademy-collectible-card__art--character .mecademy-collectible-card__halo {
+  z-index: 4;
+  width: 72%;
+  height: 72%;
+  opacity: 0.28;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.mecademy-collectible-card__halo {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 1px solid color-mix(in srgb, var(--collectible-accent) 44%, transparent);
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--collectible-accent) 20%, transparent), transparent 66%);
+  box-shadow:
+    inset 0 0 32px color-mix(in srgb, var(--collectible-accent) 12%, transparent),
+    0 0 34px color-mix(in srgb, var(--collectible-accent) 18%, transparent);
+}
+
+.mecademy-collectible-card__copy {
+  position: relative;
+  z-index: 7;
+  margin-top: auto;
+}
+
+.mecademy-collectible-card__copy h3 {
+  font-weight: 850;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+}
+
+.mecademy-event-card {
+  box-shadow:
+    inset 0 0 0 6px rgba(255, 255, 255, 0.035),
+    0 32px 80px rgba(3, 7, 25, 0.48),
+    0 0 40px rgba(24, 213, 255, 0.14);
+  transform: rotate(-0.8deg);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mecademy-event-card:hover {
+  transform: translateY(-7px) rotate(0deg);
+}
+
+.mecademy-rare-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transform: rotate(1.8deg);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mecademy-rare-card::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(115deg, transparent 18%, rgba(255, 255, 255, 0.2) 50%, transparent 76%);
+  content: "";
+  z-index: 2;
+  opacity: 0.24;
+  pointer-events: none;
+}
+
+.mecademy-event-variation {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 24% 18%, rgba(24, 213, 255, 0.2), transparent 28%),
+    radial-gradient(circle at 78% 74%, rgba(255, 79, 216, 0.16), transparent 30%),
+    linear-gradient(145deg, rgba(7, 13, 38, 0.48), rgba(12, 20, 56, 0.92));
+  pointer-events: none;
+}
+
+.mecademy-event-variation::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 9, 27, 0.08), rgba(5, 9, 27, 0.62));
+  content: "";
+}
+
+.mecademy-event-variation span {
+  position: absolute;
+  width: 82px;
+  height: 82px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(24, 213, 255, 0.18), rgba(139, 92, 246, 0.08));
+  box-shadow: 0 0 28px rgba(24, 213, 255, 0.12);
+  opacity: 0.44;
+}
+
+.mecademy-event-variation span:nth-child(1) { left: -18px; top: 18%; transform: rotate(18deg); }
+.mecademy-event-variation span:nth-child(2) { right: 12%; top: 8%; width: 46px; height: 46px; border-radius: 50%; }
+.mecademy-event-variation span:nth-child(3) { right: -26px; bottom: 22%; transform: rotate(42deg); }
+.mecademy-event-variation span:nth-child(4) { left: 36%; bottom: -18px; width: 58px; height: 58px; border-color: rgba(255, 216, 77, 0.26); }
+
+.mecademy-rare-card:hover {
+  transform: translateY(-7px) rotate(0deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .mecademy-collectible-card:hover .mecademy-collectible-card__shine {
+    animation: meca-card-shine 1.15s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .mecademy-collectible-card__halo {
+    animation: mecademy-card-halo 6.4s ease-in-out infinite;
+  }
+
+  .mecademy-event-variation span:nth-child(1) { animation: mecademy-event-drift-a 8.3s ease-in-out infinite; }
+  .mecademy-event-variation span:nth-child(2) { animation: mecademy-event-drift-b 6.1s ease-in-out -1.4s infinite; }
+  .mecademy-event-variation span:nth-child(3) { animation: mecademy-event-drift-a 9.7s ease-in-out -3.2s infinite reverse; }
+  .mecademy-event-variation span:nth-child(4) { animation: mecademy-event-drift-b 7.4s ease-in-out -2.1s infinite reverse; }
+}
+
+@keyframes mecademy-card-halo {
+  0%, 100% { transform: scale(0.96); opacity: 0.72; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+@keyframes mecademy-event-drift-a {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(18deg); opacity: 0.28; }
+  43% { transform: translate3d(18px, -14px, 0) rotate(34deg); opacity: 0.58; }
+  72% { transform: translate3d(-8px, 8px, 0) rotate(9deg); opacity: 0.38; }
+}
+
+@keyframes mecademy-event-drift-b {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(0.9); opacity: 0.22; }
+  37% { transform: translate3d(-12px, 18px, 0) scale(1.08); opacity: 0.52; }
+  76% { transform: translate3d(9px, -7px, 0) scale(0.96); opacity: 0.34; }
+}
+
+.meca-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.meca-wordmark {
+  letter-spacing: -0.045em;
+}
+
+.meca-focus-ring:focus-visible {
+  outline: 3px solid #f2c45b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 640px) {
+  .meca-container {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .meca-container {
+    padding-inline: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .meca-card-deck {
+    min-height: auto;
+    margin-inline: -1rem;
+    padding: 28px 0 36px;
+  }
+
+  .meca-card-deck__track {
+    min-height: 430px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 22px max(1rem, calc((100vw - 286px) / 2)) 32px;
+    scroll-padding-inline: max(1rem, calc((100vw - 286px) / 2));
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .meca-card-deck__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .meca-feature-card-shell,
+  .meca-feature-card--center {
+    width: 286px;
+    height: 404px;
+    margin: 0;
+    scroll-snap-align: center;
+    transform: none;
+  }
+
+  .meca-feature-card-shell + .meca-feature-card-shell {
+    margin-left: 16px;
+  }
+
+  .meca-feature-card-shell:hover,
+  .meca-feature-card-shell:focus-within {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 767px) {
+  .mecademy-card-gallery {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .mecademy-collectible-card,
+  .mecademy-card-gallery--titles .mecademy-collectible-card {
+    min-height: 370px;
+    transform: none;
+  }
+
+  .mecademy-event-card,
+  .mecademy-rare-card {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .meca-site *,
+  .meca-site *::before,
+  .meca-site *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

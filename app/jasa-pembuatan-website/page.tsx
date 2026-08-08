@@ -12,6 +12,7 @@ import WhyChooseSection from "./_components/WhyChooseSection";
 import BenefitsSection from "./_components/BenefitsSection";
 import ProcessSection from "./_components/ProcessSection";
 import CtaSection from "./_components/CtaSection";
+import MecaProductSpotlight from "@/components/MecaProductSpotlight";
 
 export default function JasaPembuatanWebsitePage() {
   const [selectedCategory, setSelectedCategory] = useState("Landing Page");
@@ -29,6 +30,7 @@ export default function JasaPembuatanWebsitePage() {
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
+      <MecaProductSpotlight />
       <ServicesSection onSelectCategory={handleSelectCategory} />
       <div ref={pricingRef}>
         <PricingSection
