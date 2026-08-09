@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { ArrowRightIcon, ChatBubbleLeftRightIcon, ShieldCheckIcon } from "@heroicons/react/24/outline";
 import MecaReveal from "@/components/meca/MecaReveal";
 import MecaSectionCTA from "@/components/meca/MecaSectionCTA";
@@ -60,7 +59,7 @@ export default function MecaFaqPage() {
             <span className="grid h-14 w-14 place-items-center rounded-[16px] bg-[#08244b] text-white shadow-[0_12px_28px_rgba(8,36,75,0.22)]"><ChatBubbleLeftRightIcon className="h-8 w-8" /></span>
             <h2 className="meca-section-title mt-6 text-[#101828]">Yang perlu Anda tahu.</h2>
             <p className="mt-5 max-w-[44ch] text-sm leading-7 text-slate-600">Belum menemukan jawaban? Ceritakan kebutuhan bimbel atau tempat kursus Anda.</p>
-            <Link href="/meca/fitur" className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#0d3b73]">Lihat fitur <ArrowRightIcon className="h-4 w-4" /></Link>
+            <a href="/meca/fitur" className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#0d3b73]">Lihat fitur <ArrowRightIcon className="h-4 w-4" /></a>
           </MecaReveal>
           <div className="grid gap-10">
             {faqGroups.map((group, groupIndex) => (

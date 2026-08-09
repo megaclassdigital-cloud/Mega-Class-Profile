@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import {
   AcademicCapIcon,
   ArrowUpRightIcon,
@@ -146,7 +145,7 @@ export default function MecaFeatureCardShowcase() {
                     style={isCenter && !reduceMotion ? { rotateX, rotateY, transformPerspective: 900 } : undefined}
                     className="h-full"
                   >
-                    <Link
+                    <a
                       href={card.href}
                       aria-label={card.title + " Lihat penjelasan fitur."}
                       className="meca-feature-card meca-focus-ring group"
@@ -178,7 +177,7 @@ export default function MecaFeatureCardShowcase() {
                           <ArrowUpRightIcon className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                         </span>
                       </span>
-                    </Link>
+                    </a>
                   </motion.div>
                 </motion.div>
               );

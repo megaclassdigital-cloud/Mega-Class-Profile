@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ArrowLeftIcon, ArrowUpRightIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -14,26 +13,26 @@ export default function MecaNavbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 text-[#101828] backdrop-blur-xl">
       <nav className="meca-container flex h-[72px] items-center justify-between" aria-label="Navigasi MECA">
-        <Link href="/meca" className="meca-focus-ring flex items-center gap-3 rounded-lg" aria-label="MECA Home">
+        <a href="/meca" className="meca-focus-ring flex items-center gap-3 rounded-lg" aria-label="MECA Home">
           <Image src="/images/meca/meca-mark-transparent-v1.png" alt="" width={816} height={929} priority unoptimized className="h-12 w-auto" />
           <span>
             <span className="meca-wordmark meca-display block text-xl font-extrabold leading-none">MECA</span>
             <span className="mt-1 block text-[9px] font-semibold tracking-[0.06em] text-slate-500">by Mega Class Digital</span>
           </span>
-        </Link>
+        </a>
 
         <div className="hidden items-center gap-1 md:flex">
           {MECA_NAV_LINKS.map((link) => {
             const active = pathname === link.href;
             return (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
                 aria-current={active ? "page" : undefined}
                 className={`meca-focus-ring rounded-lg px-4 py-2 text-sm font-semibold transition ${active ? (link.href === "/meca/mecademy" ? "bg-[#0a1735] text-[#f2c45b]" : "bg-[#f7edcf] text-[#08244b]") : "text-slate-600 hover:bg-slate-100 hover:text-[#101828]"}`}
               >
                 {link.label}
-              </Link>
+              </a>
             );
           })}
         </div>
@@ -59,7 +58,7 @@ export default function MecaNavbar() {
           <div className="meca-container grid gap-1 px-0">
             {MECA_NAV_LINKS.map((link) => {
               const active = pathname === link.href;
-              return <Link key={link.href} href={link.href} onClick={() => setIsOpen(false)} aria-current={active ? "page" : undefined} className={`rounded-lg px-4 py-3.5 text-base font-semibold ${active ? (link.href === "/meca/mecademy" ? "bg-[#0a1735] text-[#f2c45b]" : "bg-[#f7edcf] text-[#08244b]") : "text-slate-700"}`}>{link.label}</Link>;
+              return <a key={link.href} href={link.href} onClick={() => setIsOpen(false)} aria-current={active ? "page" : undefined} className={`rounded-lg px-4 py-3.5 text-base font-semibold ${active ? (link.href === "/meca/mecademy" ? "bg-[#0a1735] text-[#f2c45b]" : "bg-[#f7edcf] text-[#08244b]") : "text-slate-700"}`}>{link.label}</a>;
             })}
             <a href="https://megaclassdigital.com" onClick={() => setIsOpen(false)} className="mt-2 flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-semibold text-slate-500">
               <ArrowLeftIcon className="h-4 w-4" aria-hidden="true" />

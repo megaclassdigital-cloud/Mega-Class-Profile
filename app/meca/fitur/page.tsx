@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import {
   AcademicCapIcon,
   ArrowRightIcon,
@@ -49,7 +48,7 @@ export default function MecaFeaturesPage() {
             </div>
             <div className="lg:pb-2">
               <p className="max-w-[60ch] text-base leading-8 text-white/70 sm:text-lg">Atur kelas, data siswa, tugas, tagihan, dan laporan dari satu website.</p>
-              <Link href="/meca/mecademy" className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#f2c45b] hover:text-white">Lihat fitur Mecademy <ArrowRightIcon className="h-4 w-4" /></Link>
+              <a href="/meca/mecademy" className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#f2c45b] hover:text-white">Lihat fitur Mecademy <ArrowRightIcon className="h-4 w-4" /></a>
             </div>
           </MecaReveal>
         </div>

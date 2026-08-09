@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRightIcon, BoltIcon, SparklesIcon, TrophyIcon } from "@heroicons/react/24/outline";
 
@@ -40,10 +39,10 @@ export default function MecademySpotlight({ compact = false }: { compact?: boole
           <p className="mt-5 max-w-[58ch] text-sm leading-7 text-white/68 sm:text-base">
             Siswa menyelesaikan tugas, menjaga konsistensi, mengumpulkan poin, dan mendapatkan julukan sesuai pencapaiannya.
           </p>
-          <Link href="/meca/mecademy" className="meca-focus-ring mt-7 inline-flex items-center gap-2 rounded-lg bg-[#b8ff5b] px-5 py-3 text-sm font-extrabold text-[#08101d] transition hover:-translate-y-0.5 hover:bg-[#d2ff99]">
+          <a href="/meca/mecademy" className="meca-focus-ring mt-7 inline-flex items-center gap-2 rounded-lg bg-[#b8ff5b] px-5 py-3 text-sm font-extrabold text-[#08101d] transition hover:-translate-y-0.5 hover:bg-[#d2ff99]">
             Lihat Mecademy
             <ArrowRightIcon className="h-4 w-4" />
-          </Link>
+          </a>
         </div>
         {!compact && (
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-2">

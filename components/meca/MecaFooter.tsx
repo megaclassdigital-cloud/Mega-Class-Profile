@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { MECA_CONTACT, MECA_NAV_LINKS, MECA_WHATSAPP_URL } from "@/lib/meca";
 
@@ -16,7 +15,7 @@ export default function MecaFooter() {
         <nav aria-label="Navigasi footer MECA">
           <p className="text-sm font-bold text-white">Jelajahi</p>
           <ul className="mt-4 grid gap-3 text-sm text-white/60">
-            {MECA_NAV_LINKS.map((link) => <li key={link.href}><Link href={link.href} className="transition hover:text-white">{link.label}</Link></li>)}
+            {MECA_NAV_LINKS.map((link) => <li key={link.href}><a href={link.href} className="transition hover:text-white">{link.label}</a></li>)}
           </ul>
         </nav>
         <div>
