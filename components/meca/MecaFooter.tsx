@@ -11,6 +11,7 @@ export default function MecaFooter() {
           <Image src="/images/meca/meca-logo-transparent-v1.png" alt="MECA" width={1129} height={1393} unoptimized className="h-28 w-auto" />
           <p className="mt-4 max-w-md text-sm leading-7 text-white/65">Atur kelas, jadwal, siswa, materi, pembayaran, tugas, dan laporan bimbel dari satu website.</p>
           <p className="mt-5 text-xs font-semibold tracking-[0.04em] text-[#f2c45b]">Saat ini tersedia dalam bentuk demo.</p>
+          <a href="https://megaclassdigital.com" className="mt-5 inline-flex text-xs font-semibold text-white/45 transition hover:text-white/80">Kembali ke Mega Class Digital</a>
         </div>
         <nav aria-label="Navigasi footer MECA">
           <p className="text-sm font-bold text-white">Jelajahi</p>
@@ -27,7 +28,9 @@ export default function MecaFooter() {
           <a href={`mailto:${MECA_CONTACT.email}`} className="mt-3 block break-all text-sm text-white/55 hover:text-white">{MECA_CONTACT.email}</a>
         </div>
       </div>
-      <div className="border-t border-white/10 px-4 py-5 text-center text-xs text-white/45">© 2026 Mega Class Digital. MECA masih dalam tahap demo.</div>
+      <div className="border-t border-white/10 px-4 py-5 text-center text-xs text-white/45">
+        © 2026 <a href="https://megaclassdigital.com" className="transition hover:text-white/80">Mega Class Digital</a>. MECA masih dalam tahap demo.
+      </div>
     </footer>
   );
 }

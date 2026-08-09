@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { ArrowUpRightIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { ArrowLeftIcon, ArrowUpRightIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { MECA_NAV_LINKS, MECA_WHATSAPP_URL } from "@/lib/meca";
 
 export default function MecaNavbar() {
@@ -38,10 +38,16 @@ export default function MecaNavbar() {
           })}
         </div>
 
-        <a href={MECA_WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="meca-focus-ring hidden items-center gap-2 rounded-lg bg-[#08244b] px-5 py-2.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#0d3b73] md:flex">
-          Minta demo
-          <ArrowUpRightIcon className="h-4 w-4" aria-hidden="true" />
-        </a>
+        <div className="hidden items-center gap-3 md:flex">
+          <a href="https://megaclassdigital.com" className="meca-focus-ring hidden items-center gap-1.5 rounded-lg px-2 py-2 text-xs font-semibold text-slate-500 transition hover:bg-slate-100 hover:text-[#08244b] xl:inline-flex" aria-label="Kembali ke website Mega Class Digital">
+            <ArrowLeftIcon className="h-3.5 w-3.5" aria-hidden="true" />
+            Mega Class Digital
+          </a>
+          <a href={MECA_WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="meca-focus-ring flex items-center gap-2 rounded-lg bg-[#08244b] px-5 py-2.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#0d3b73]">
+            Minta demo
+            <ArrowUpRightIcon className="h-4 w-4" aria-hidden="true" />
+          </a>
+        </div>
 
         <button type="button" onClick={() => setIsOpen((value) => !value)} aria-expanded={isOpen} aria-controls="meca-mobile-menu" aria-label={isOpen ? "Tutup menu" : "Buka menu"} className="meca-focus-ring rounded-lg border border-slate-200 p-2.5 text-[#101828] md:hidden">
           {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
@@ -55,6 +61,10 @@ export default function MecaNavbar() {
               const active = pathname === link.href;
               return <Link key={link.href} href={link.href} onClick={() => setIsOpen(false)} aria-current={active ? "page" : undefined} className={`rounded-lg px-4 py-3.5 text-base font-semibold ${active ? (link.href === "/meca/mecademy" ? "bg-[#0a1735] text-[#f2c45b]" : "bg-[#f7edcf] text-[#08244b]") : "text-slate-700"}`}>{link.label}</Link>;
             })}
+            <a href="https://megaclassdigital.com" onClick={() => setIsOpen(false)} className="mt-2 flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-semibold text-slate-500">
+              <ArrowLeftIcon className="h-4 w-4" aria-hidden="true" />
+              Mega Class Digital
+            </a>
             <a href={MECA_WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="mt-3 rounded-lg bg-[#08244b] px-5 py-3.5 text-center text-sm font-bold text-white">Minta demo</a>
           </div>
         </div>
