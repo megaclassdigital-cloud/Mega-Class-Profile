@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
+const isProduction = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
+  assetPrefix: isProduction ? 'https://mega-class-profile.vercel.app' : undefined,
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
