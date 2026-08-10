@@ -7,7 +7,7 @@ export default function MecaFooter() {
     <footer className="bg-[#061a35] text-white">
       <div className="meca-container grid gap-12 py-14 md:grid-cols-[1.4fr_0.7fr_0.9fr]">
         <div>
-          <Image src="/images/meca/meca-logo-transparent-v1.png" alt="MECA" width={1129} height={1393} unoptimized className="h-28 w-auto" />
+          <Image src="/images/meca/meca-logo-transparent-v1.webp" alt="MECA" width={1129} height={1393} unoptimized className="h-28 w-auto" />
           <p className="mt-4 max-w-md text-sm leading-7 text-white/65">Atur kelas, jadwal, siswa, materi, pembayaran, tugas, dan laporan bimbel dari satu website.</p>
           <p className="mt-5 text-xs font-semibold tracking-[0.04em] text-[#f2c45b]">Saat ini tersedia dalam bentuk demo.</p>
           <a href="https://megaclassdigital.com" className="mt-5 inline-flex text-xs font-semibold text-white/45 transition hover:text-white/80">Kembali ke Mega Class Digital</a>

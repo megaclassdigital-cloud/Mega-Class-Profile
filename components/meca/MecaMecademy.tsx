@@ -36,7 +36,7 @@ export default function MecaMecademy() {
         <div className="mt-5 grid gap-5 lg:grid-cols-[1.08fr_0.92fr]">
           <MecaReveal className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-3">
             <div className="relative aspect-[16/8.8] overflow-hidden rounded-xl">
-              <Image src="/images/meca/meca-dashboard.png" alt="Contoh tampilan Mecademy pada dashboard MECA" fill sizes="(max-width: 1024px) 100vw, 56vw" className="object-cover object-bottom" />
+              <Image src="/images/meca/meca-dashboard.webp" alt="Contoh tampilan Mecademy pada dashboard MECA" fill sizes="(max-width: 1024px) 100vw, 56vw" className="object-cover object-bottom" />
             </div>
           </MecaReveal>
 

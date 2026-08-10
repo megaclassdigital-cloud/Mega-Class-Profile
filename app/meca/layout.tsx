@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     locale: "id_ID",
     images: [
       {
-        url: "/images/meca/meca-3d-hero.png",
+        url: "/images/meca/meca-3d-hero.webp",
         width: 1536,
         height: 1024,
         alt: "Visual tiga dimensi ekosistem belajar MECA",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Aplikasi Manajemen Bimbel dan Tempat Kursus | MECA",
     description: "Atur jadwal, siswa, materi, tugas, pembayaran, dan laporan bimbel dari satu website.",
-    images: ["/images/meca/meca-3d-hero.png"],
+    images: ["/images/meca/meca-3d-hero.webp"],
   },
 };
 

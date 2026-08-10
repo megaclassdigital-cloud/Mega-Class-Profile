@@ -43,7 +43,7 @@ export default function MecaStructuredData({ page, faqItems = [] }: MecaStructur
       url: baseUrl,
       logo: {
         "@type": "ImageObject",
-        url: `${baseUrl}/images/meca/meca-logo-transparent-v1.png`,
+        url: `${baseUrl}/images/meca/meca-logo-transparent-v1.webp`,
       },
       description: "Pengembang website, sistem digital, dan produk MECA untuk kebutuhan bisnis dan lembaga pendidikan.",
     },
@@ -58,7 +58,7 @@ export default function MecaStructuredData({ page, faqItems = [] }: MecaStructur
       applicationCategory: ["BusinessApplication", "EducationalApplication"],
       operatingSystem: "Web browser",
       inLanguage: "id-ID",
-      image: `${baseUrl}/images/meca/meca-3d-hero.png`,
+      image: `${baseUrl}/images/meca/meca-3d-hero.webp`,
       provider: { "@id": `${baseUrl}/#organization` },
       featureList: [
         "Manajemen kelas dan jadwal",

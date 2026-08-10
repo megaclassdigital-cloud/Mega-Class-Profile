@@ -17,7 +17,7 @@ export default function MecaProductSpotlight() {
             <div>
               <p className="text-sm font-semibold text-[#F2C45B]">Website Pengelolaan Bimbel</p>
               <div className="mt-4 flex items-center gap-3">
-                <Image src="/images/meca/meca-mark-transparent-v1.png" alt="" width={816} height={929} unoptimized className="h-14 w-auto" />
+                <Image src="/images/meca/meca-mark-transparent-v1.webp" alt="" width={816} height={929} unoptimized className="h-14 w-auto" />
                 <h3 className="text-3xl font-bold tracking-tight md:text-4xl">MECA</h3>
               </div>
               <p className="mt-4 max-w-lg text-base leading-7 text-blue-100 md:text-lg md:leading-8">
@@ -36,7 +36,7 @@ export default function MecaProductSpotlight() {
 
             <div className="overflow-hidden rounded-2xl border border-white/20 bg-white/10 p-2 shadow-xl">
               <Image
-                src="/images/meca/meca-3d-hero.png"
+                src="/images/meca/meca-3d-hero.webp"
                 alt="Visual tiga dimensi produk MECA"
                 width={1536}
                 height={1024}

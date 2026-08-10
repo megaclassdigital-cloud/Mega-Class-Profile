@@ -31,7 +31,7 @@ export default function MecaMotionScene() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#061a35]/70 via-transparent to-transparent" aria-hidden="true" />
       </motion.div>
       <motion.div animate={reduceMotion ? undefined : { y: [0, 5, 0] }} transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }} className="absolute -bottom-1 right-3 w-[58%] overflow-hidden rounded-[18px] border border-[#d8a62a]/55 bg-white p-1.5 shadow-[0_20px_55px_rgba(16,24,40,0.18),0_0_28px_rgba(216,166,42,0.16)] sm:right-7">
-        <Image src="/images/meca/meca-dashboard.png" alt="Cuplikan visual konsep dashboard MECA" width={1536} height={1024} unoptimized className="h-auto w-full rounded-[13px]" />
+        <Image src="/images/meca/meca-dashboard.webp" alt="Cuplikan visual konsep dashboard MECA" width={1536} height={1024} unoptimized className="h-auto w-full rounded-[13px]" />
       </motion.div>
     </motion.div>
   );

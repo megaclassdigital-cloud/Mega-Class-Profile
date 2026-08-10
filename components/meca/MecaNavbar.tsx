@@ -14,7 +14,7 @@ export default function MecaNavbar() {
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 text-[#101828] backdrop-blur-xl">
       <nav className="meca-container flex h-[72px] items-center justify-between" aria-label="Navigasi MECA">
         <a href="/meca" className="meca-focus-ring flex items-center gap-3 rounded-lg" aria-label="MECA Home">
-          <Image src="/images/meca/meca-mark-transparent-v1.png" alt="" width={816} height={929} priority unoptimized className="h-12 w-auto" />
+          <Image src="/images/meca/meca-mark-transparent-v1.webp" alt="" width={816} height={929} priority unoptimized className="h-12 w-auto" />
           <span>
             <span className="meca-wordmark meca-display block text-xl font-extrabold leading-none">MECA</span>
             <span className="mt-1 block text-[9px] font-semibold tracking-[0.06em] text-slate-500">by Mega Class Digital</span>

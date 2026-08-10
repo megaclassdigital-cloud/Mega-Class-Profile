@@ -77,7 +77,7 @@ export default function MecademyPage() {
           </MecaReveal>
           <div className="mt-12 grid gap-4 lg:grid-cols-[1.35fr_0.65fr]">
             <MecaReveal className="mecademy-event-card relative min-h-[460px] overflow-hidden rounded-[22px] border border-[#18d5ff]/25 shadow-[0_0_55px_rgba(24,213,255,0.12)]">
-              <Image src="/images/meca/mecademy-classroom-event-v1.png" alt="Sekelompok siswa berdiskusi dan mengerjakan proyek di dalam kelas" fill sizes="(max-width: 1024px) 100vw, 65vw" className="object-cover" />
+              <Image src="/images/meca/mecademy-classroom-event-v1.webp" alt="Sekelompok siswa berdiskusi dan mengerjakan proyek di dalam kelas" fill sizes="(max-width: 1024px) 100vw, 65vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#070b1d] via-[#070b1d]/25 to-transparent" />
               <div className="absolute bottom-0 z-10 p-7 sm:p-9"><p className="text-xs font-bold text-[#f2c45b]">Contoh event</p><h3 className="mt-3 text-3xl font-extrabold">Pekan Proyek Bareng</h3><p className="mt-3 max-w-xl text-sm leading-7 text-white/70">Siswa menyelesaikan tantangan, mempresentasikan hasil, lalu mendapat umpan balik dan julukan.</p></div>
             </MecaReveal>

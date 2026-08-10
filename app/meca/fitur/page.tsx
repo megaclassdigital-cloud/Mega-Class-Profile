@@ -87,7 +87,7 @@ export default function MecaFeaturesPage() {
         <div className="meca-container grid gap-12 lg:grid-cols-[1.18fr_0.82fr] lg:items-center">
           <MecaReveal className="relative">
             <figure className="relative overflow-hidden rounded-[22px] border border-[#dce5ec] bg-[#f4fafc] p-2 shadow-[0_24px_70px_rgba(16,24,40,0.12)] sm:p-3">
-              <Image src="/images/meca/meca-dashboard.png" alt="Visual konsep dashboard MECA dengan kelas, siswa, pembayaran, progres, dan Mecademy" width={1536} height={1024} unoptimized sizes="(max-width: 1024px) 100vw, 58vw" className="h-auto w-full rounded-[16px]" />
+              <Image src="/images/meca/meca-dashboard.webp" alt="Visual konsep dashboard MECA dengan kelas, siswa, pembayaran, progres, dan Mecademy" width={1536} height={1024} unoptimized sizes="(max-width: 1024px) 100vw, 58vw" className="h-auto w-full rounded-[16px]" />
               <figcaption className="px-3 pb-2 pt-3 text-xs leading-5 text-slate-500">Visual demo dengan data contoh.</figcaption>
             </figure>
           </MecaReveal>

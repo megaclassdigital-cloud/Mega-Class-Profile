@@ -31,7 +31,7 @@ export default function MecaHero() {
         <div className="relative lg:-mr-24">
           <div className="absolute inset-x-10 bottom-0 h-24 rounded-full bg-blue-500/15 blur-3xl" aria-hidden="true" />
           <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_28px_80px_rgba(15,39,71,0.16)]">
-            <Image src="/images/meca/meca-dashboard.png" alt="Contoh dashboard MECA yang menyatukan kelas, siswa, pembayaran, progress, dan Mecademy" width={1536} height={1024} priority sizes="(max-width: 1024px) 100vw, 62vw" className="h-auto w-full" />
+            <Image src="/images/meca/meca-dashboard.webp" alt="Contoh dashboard MECA yang menyatukan kelas, siswa, pembayaran, progress, dan Mecademy" width={1536} height={1024} priority sizes="(max-width: 1024px) 100vw, 62vw" className="h-auto w-full" />
           </div>
         </div>
       </div>
