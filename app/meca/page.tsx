@@ -10,12 +10,18 @@ import MecaMotionScene from "@/components/meca/MecaMotionScene";
 import MecaReveal from "@/components/meca/MecaReveal";
 import MecaSectionCTA from "@/components/meca/MecaSectionCTA";
 import MecaFeatureCardShowcase from "@/components/meca/MecaFeatureCardShowcase";
+import MecaStructuredData from "@/components/meca/MecaStructuredData";
 import { MECA_WHATSAPP_URL } from "@/lib/meca";
 
 export const metadata: Metadata = {
-  title: "Website Pengelolaan Bimbel dan Tempat Kursus",
-  description: "MECA membantu bimbel dan tempat kursus mengatur kelas, jadwal, siswa, materi, pembayaran, dan hasil belajar dalam satu website.",
+  title: { absolute: "Aplikasi Manajemen Bimbel dan Tempat Kursus | MECA" },
+  description: "Kenali demo MECA, aplikasi manajemen bimbel dan tempat kursus untuk mengatur jadwal, data siswa, materi, tugas, pembayaran, dan laporan dalam satu tempat.",
   alternates: { canonical: "/meca" },
+  openGraph: {
+    title: "Aplikasi Manajemen Bimbel dan Tempat Kursus | MECA",
+    description: "Kelola jadwal, siswa, materi, tugas, pembayaran, dan laporan bimbel dalam satu website.",
+    url: "https://megaclassdigital.com/meca",
+  },
 };
 
 const pillars = [
@@ -29,6 +35,7 @@ const scattered = ["Jadwal berubah di chat", "Materi tercecer di Drive", "Pembay
 export default function MecaPage() {
   return (
     <main className="overflow-x-clip bg-[#f6f4ef]">
+      <MecaStructuredData page="home" />
       <section className="meca-dark relative overflow-hidden">
         <div className="meca-container relative grid min-h-[calc(100dvh-68px)] items-center gap-14 py-14 lg:grid-cols-[0.9fr_1.1fr] lg:py-20">
           <div className="relative z-10 max-w-2xl">
@@ -40,7 +47,7 @@ export default function MecaPage() {
               <h1 className="text-white">
                 Kelola bimbel dan kursus <span className="text-[#f2c45b]">dalam satu website.</span>
               </h1>
-              <p className="mt-7 max-w-[58ch] text-base leading-7 text-white/70 sm:text-lg sm:leading-8">Atur kelas, jadwal, siswa, materi, pembayaran, dan progres belajar tanpa bolak-balik chat, Drive, dan spreadsheet.</p>
+              <p className="mt-7 max-w-[58ch] text-base leading-7 text-white/70 sm:text-lg sm:leading-8">MECA adalah aplikasi manajemen bimbel dan tempat kursus untuk mengatur kelas, jadwal, siswa, materi, pembayaran, dan progres belajar tanpa bolak-balik chat, Drive, dan spreadsheet.</p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a href={MECA_WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="meca-focus-ring inline-flex items-center justify-center gap-2 rounded-lg bg-[#d8a62a] px-6 py-3.5 text-sm font-bold text-[#061a35] transition hover:-translate-y-0.5 hover:bg-[#f2c45b]">
                   Minta demo
@@ -87,6 +94,7 @@ export default function MecaPage() {
             <MecaReveal className="mt-4 rounded-[22px] border border-[#bde7f2] bg-[#e9f8fc] p-7 text-[#101828] sm:p-9">
               <p className="meca-eyebrow">Dengan MECA</p>
               <p className="mt-4 max-w-2xl text-2xl font-bold leading-snug sm:text-3xl">Jadwal, materi, tagihan, tugas, dan laporan tersedia di satu tempat.</p>
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-700">Admin dapat mencari data siswa, memeriksa jadwal kelas, melihat status pembayaran, dan menyiapkan laporan tanpa menggabungkan catatan dari aplikasi yang berbeda.</p>
             </MecaReveal>
           </div>
         </div>

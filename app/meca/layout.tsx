@@ -18,7 +18,18 @@ export const metadata: Metadata = {
     template: "%s | MECA",
   },
   description:
-    "Website untuk mengelola kelas, jadwal, siswa, materi, pembayaran, dan hasil belajar bimbel atau tempat kursus.",
+    "Kenali demo MECA, aplikasi manajemen bimbel dan tempat kursus untuk mengatur jadwal, data siswa, materi, tugas, pembayaran, dan laporan dalam satu tempat.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   alternates: { canonical: "/meca" },
   openGraph: {
     title: "MECA by Mega Class Digital",
@@ -34,6 +45,12 @@ export const metadata: Metadata = {
         alt: "Visual tiga dimensi ekosistem belajar MECA",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aplikasi Manajemen Bimbel dan Tempat Kursus | MECA",
+    description: "Atur jadwal, siswa, materi, tugas, pembayaran, dan laporan bimbel dari satu website.",
+    images: ["/images/meca/meca-3d-hero.png"],
   },
 };
 

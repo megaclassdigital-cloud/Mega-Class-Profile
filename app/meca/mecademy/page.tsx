@@ -8,25 +8,32 @@ import MecaBadgeOrbit from "@/components/meca/MecaBadgeOrbit";
 import MecademyCardGallery from "@/components/meca/MecademyCardGallery";
 import MecaReveal from "@/components/meca/MecaReveal";
 import MecaSectionCTA from "@/components/meca/MecaSectionCTA";
+import MecaStructuredData from "@/components/meca/MecaStructuredData";
 
 export const metadata: Metadata = {
-  title: "Mecademy | Misi, Poin, dan Julukan Siswa",
-  description: "Siswa menyelesaikan misi, mengumpulkan poin, naik peringkat, dan mendapatkan julukan berdasarkan tugas yang selesai.",
+  title: { absolute: "Gamifikasi Pembelajaran untuk Bimbel | Mecademy MECA" },
+  description: "Mecademy membawa gamifikasi pembelajaran ke bimbel melalui misi, poin, peringkat, julukan, event, dan pamer karya yang dapat disesuaikan oleh lembaga.",
   alternates: { canonical: "/meca/mecademy" },
+  openGraph: {
+    title: "Gamifikasi Pembelajaran untuk Bimbel | Mecademy MECA",
+    description: "Ubah tugas, kehadiran, event, dan karya siswa menjadi misi, poin, peringkat, serta julukan.",
+    url: "https://megaclassdigital.com/meca/mecademy",
+  },
 };
 
 export default function MecademyPage() {
   return (
     <main className="mecademy-page overflow-x-clip">
+      <MecaStructuredData page="mecademy" />
       <section className="relative isolate overflow-hidden">
         <div className="meca-neon-grid absolute inset-0 -z-20 opacity-60" aria-hidden="true" />
         <div className="absolute -left-28 top-12 -z-10 h-80 w-80 rounded-full bg-[#8b5cf6]/25 blur-[110px]" aria-hidden="true" />
         <div className="absolute -right-20 bottom-8 -z-10 h-96 w-96 rounded-full bg-[#18d5ff]/18 blur-[120px]" aria-hidden="true" />
         <div className="meca-container grid min-h-[calc(100dvh-68px)] items-center gap-8 py-14 lg:grid-cols-[0.9fr_1.1fr] lg:py-16">
           <MecaReveal className="meca-hero-copy relative z-10">
-            <p className="flex items-center gap-2 text-xs font-extrabold tracking-[0.05em] text-[#f2c45b]"><BoltIcon className="h-4 w-4" />Mecademy</p>
+            <p className="flex items-center gap-2 text-xs font-extrabold tracking-[0.05em] text-[#f2c45b]"><BoltIcon className="h-4 w-4" />Gamifikasi pembelajaran dengan Mecademy</p>
             <h1 className="mecademy-text-glow">Selesaikan misi. Raih julukan.</h1>
-            <p className="mt-7 max-w-[56ch] text-base leading-8 text-white/70 sm:text-lg">Setiap tugas dan aktivitas dapat menghasilkan poin, peringkat, atau julukan dengan syarat yang jelas.</p>
+            <p className="mt-7 max-w-[56ch] text-base leading-8 text-white/70 sm:text-lg">Mecademy adalah fitur gamifikasi pembelajaran untuk bimbel. Setiap tugas dan aktivitas dapat menghasilkan poin, peringkat, atau julukan dengan syarat yang jelas.</p>
             <div className="mt-8 flex flex-wrap gap-2">
               {["Misi", "Poin", "Peringkat", "Julukan", "Pamer Karya"].map((item, index) => (
                 <span key={item} className="rounded-lg border bg-[#0d1538]/80 px-3 py-2 text-xs font-bold text-white/85 backdrop-blur-md" style={{ borderColor: ["#18d5ff66", "#ff4fd866", "#b8ff5b66", "#ffd84d66", "#8b5cf666"][index] }}>{item}</span>

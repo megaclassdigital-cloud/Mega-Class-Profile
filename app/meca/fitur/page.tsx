@@ -13,11 +13,17 @@ import {
 import MecaReveal from "@/components/meca/MecaReveal";
 import MecaSectionCTA from "@/components/meca/MecaSectionCTA";
 import MecademySpotlight from "@/components/meca/MecademySpotlight";
+import MecaStructuredData from "@/components/meca/MecaStructuredData";
 
 export const metadata: Metadata = {
-  title: "Fitur MECA",
-  description: "Kelola kelas, siswa, materi, tugas, pembayaran, dan progres bimbel atau tempat kursus dalam satu website.",
+  title: { absolute: "Fitur Aplikasi Administrasi Bimbel dan Kursus | MECA" },
+  description: "Lihat fitur aplikasi administrasi bimbel dan kursus untuk mengelola kelas, absensi, materi, tugas, tagihan siswa, progres belajar, dan laporan pemilik.",
   alternates: { canonical: "/meca/fitur" },
+  openGraph: {
+    title: "Fitur Aplikasi Administrasi Bimbel dan Kursus | MECA",
+    description: "Kelola kelas, siswa, materi, tugas, tagihan, progres belajar, dan laporan pemilik dalam satu website.",
+    url: "https://megaclassdigital.com/meca/fitur",
+  },
 };
 
 const features = [
@@ -39,6 +45,7 @@ const roles = [
 export default function MecaFeaturesPage() {
   return (
     <main className="overflow-x-clip bg-[#f6f4ef]">
+      <MecaStructuredData page="features" />
       <section className="meca-dark meca-page-hero relative overflow-hidden">
         <div className="meca-container relative">
           <MecaReveal className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
@@ -47,7 +54,7 @@ export default function MecaFeaturesPage() {
               <h1>Kelola operasional bimbel tanpa rekap manual.</h1>
             </div>
             <div className="lg:pb-2">
-              <p className="max-w-[60ch] text-base leading-8 text-white/70 sm:text-lg">Atur kelas, data siswa, tugas, tagihan, dan laporan dari satu website.</p>
+              <p className="max-w-[60ch] text-base leading-8 text-white/70 sm:text-lg">Fitur aplikasi administrasi bimbel MECA membantu mengatur kelas, data siswa, absensi, tugas, tagihan, progres belajar, dan laporan dari satu website.</p>
               <a href="/meca/mecademy" className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#f2c45b] hover:text-white">Lihat fitur Mecademy <ArrowRightIcon className="h-4 w-4" /></a>
             </div>
           </MecaReveal>
@@ -87,7 +94,7 @@ export default function MecaFeaturesPage() {
           <MecaReveal delay={0.08}>
             <p className="meca-eyebrow">Data yang terhubung</p>
             <h2 className="meca-section-title mt-5 text-[#101828]">Data kelas tidak perlu dicocokkan manual.</h2>
-            <p className="mt-6 text-base leading-8 text-slate-600">Perubahan pada kelas, tugas, pembayaran, dan hasil belajar tercatat di tempat yang sama.</p>
+            <p className="mt-6 text-base leading-8 text-slate-600">Perubahan pada kelas, tugas, pembayaran, dan hasil belajar tercatat di tempat yang sama. Admin tidak perlu menyalin ulang data saat pemilik meminta ringkasan operasional.</p>
             <div className="mt-8 grid grid-cols-2 gap-3">
               {["Cari data lebih cepat", "Kurangi input berulang", "Batasi akses pengguna", "Tambah fitur saat dibutuhkan"].map((item) => <div key={item} className="rounded-xl border border-[#dce5ec] bg-[#f7f9fc] p-4 text-sm font-bold text-[#101828]">{item}</div>)}
             </div>

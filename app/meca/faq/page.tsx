@@ -2,11 +2,17 @@ import type { Metadata } from "next";
 import { ArrowRightIcon, ChatBubbleLeftRightIcon, ShieldCheckIcon } from "@heroicons/react/24/outline";
 import MecaReveal from "@/components/meca/MecaReveal";
 import MecaSectionCTA from "@/components/meca/MecaSectionCTA";
+import MecaStructuredData from "@/components/meca/MecaStructuredData";
 
 export const metadata: Metadata = {
-  title: "FAQ MECA",
-  description: "Jawaban singkat tentang demo, fitur, kecocokan lembaga, data, dan proses penggunaan MECA.",
+  title: { absolute: "Pertanyaan Aplikasi Manajemen Bimbel dan Kursus | MECA" },
+  description: "Temukan jawaban tentang demo MECA, fitur aplikasi manajemen bimbel, kecocokan lembaga kursus, penyimpanan data, penyesuaian brand, dan cara melihat demo.",
   alternates: { canonical: "/meca/faq" },
+  openGraph: {
+    title: "Pertanyaan Aplikasi Manajemen Bimbel dan Kursus | MECA",
+    description: "Jawaban tentang demo, fitur, kecocokan lembaga, data, penyesuaian brand, dan cara melihat MECA.",
+    url: "https://megaclassdigital.com/meca/faq",
+  },
 };
 
 const faqGroups = [
@@ -36,9 +42,15 @@ const faqGroups = [
   },
 ] as const;
 
+const faqItems = faqGroups.reduce<Array<readonly [string, string]>>(
+  (items, group) => [...items, ...group.items],
+  [],
+);
+
 export default function MecaFaqPage() {
   return (
     <main className="overflow-x-clip bg-[#f6f4ef]">
+      <MecaStructuredData page="faq" faqItems={faqItems} />
       <section className="meca-dark meca-page-hero relative overflow-hidden">
         <div className="meca-container relative grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
           <MecaReveal className="meca-hero-copy">
